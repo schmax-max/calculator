@@ -1,0 +1,21 @@
+{
+  "youtube" : [ 
+      "https://www.youtube.com/watch"
+  ],
+  "external" : [ 
+      "https://www.theguardian.com/politics/2015/mar/12/kitchen-miliband-photo-backfires-bbc-labour", 
+      "https://www.telegraph.co.uk/news/politics/david-cameron/10346242/David-Cameron-the-price-of-value-bread-No-idea.-I-have-a-breadmaker.html", 
+      "https://www.theguardian.com/uk-news/2019/aug/19/elton-john-defends-harry-and-meghan-over-use-of-private-jets"
+  ],
+  "internal" : [ 
+      "https://www.theatlantic.com/international/archive/2020/01/prince-harry-meghan-markle-sussex/604657/", 
+      "https://www.theatlantic.com/ideas/archive/2020/01/harry-and-meghan-could-have-future-influencers/604654/", 
+      "https://www.theatlantic.com/international/archive/2019/08/meghan-markle-vogue-radical-royalty/595288/", 
+      "https://www.theatlantic.com/contact/letters/", 
+      "https://www.theatlantic.com/author/tom-mctague/"
+  ],
+  "amazon" : [ 
+      "https://www.amazon.co.uk/Betting-House-Inside-Story-Election/dp/1785902954/"
+  ],
+  "video_links" : []
+}
