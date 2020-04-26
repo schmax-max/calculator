@@ -1,8 +1,8 @@
-'use strict'
-
+"use strict";
 
 const inputValues = {
-  floors: { // lower floor means bigger impact
+  floors: {
+    // lower floor means bigger impact
     brevity: 0.2,
     recency: 0.2,
     bubble: 0.9,
@@ -21,8 +21,8 @@ const inputValues = {
     newsletter: 0.2,
   },
   brevity: {
-    min: 5, // minutes
-    max: 20, // minutes
+    min: 8, // minutes
+    max: 15, // minutes
   },
   recency: {
     min: 0, // days
@@ -33,7 +33,6 @@ const inputValues = {
     max: 5, // references
   },
   wordsPerMinute: 200,
-}
+};
 
-module.exports = {inputValues}
-
+module.exports = { inputValues };

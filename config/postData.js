@@ -12,7 +12,7 @@ async function postData({ target, trigger = service, data, mins = 0.01 }) {
       method: "post",
       url,
       timeout: mins * 60 * 1000,
-      data
+      data,
     });
     return response.data;
   } catch (e) {
@@ -40,7 +40,7 @@ function getApiUrl(target, trigger) {
   const project = process.env._GCP_PROJECT;
   const apis = {
     production: `https://${target}-dot-${project}.appspot.com/${target}/${trigger}`,
-    local: `http://localhost:${ports[target]}/${target}/${trigger}`
+    local: `http://localhost:${ports[target]}/${target}/${trigger}`,
   };
 
   let env = "production";
@@ -59,7 +59,7 @@ function enableLocal(target) {
     // 'informant-bubble',
     // 'informant-twitter',
     // "scanner",
-    // "calculator",
+    "calculator",
     // "librarian",
     // "editor"
     // 'helper-date',
