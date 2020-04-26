@@ -33,7 +33,7 @@ async function update(req) {
 function getUpdateFind() {
   const faulty = { is_faulty: { $ne: true } };
   const date = getDateObject("updated_at", "$lt", 2);
-  return { ...faulty, ...date };
+  return Object.assign(faulty, date);
 }
 
 async function updateLoop(content_type, find, count, current = 0) {
