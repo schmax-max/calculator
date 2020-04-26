@@ -48,7 +48,11 @@ async function updateLoop(content_type, find, count, current = 0) {
       console.log(`running update #${current} of ${count}`);
       await updateGateway(content_type, contents[i]);
     }
-    return updateLoop(content_type, find, count, current);
+    if (current < 2000) {
+      return updateLoop(content_type, find, count, current);
+    } else {
+      return;
+    }
   }
 }
 
