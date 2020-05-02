@@ -14,6 +14,7 @@ async function trigger(req, res, next) {
 }
 
 async function updateTrigger(req, res, next) {
+  console.log("running updateTrigger");
   console.log(`${service} triggered by ${req.params.type}`);
   const response = await update(req);
   res.send(response);

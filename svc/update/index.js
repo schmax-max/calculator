@@ -7,7 +7,9 @@ const getScan = require("./getScan");
 module.exports = update;
 
 async function update(req) {
+  console.log("running update");
   if (gateway(req, "params")) {
+    console.log("validated params in update");
     try {
       const content_types = [
         "article",
@@ -26,6 +28,7 @@ async function update(req) {
       return;
     }
   } else {
+    console.log("error in update");
     return;
   }
 }
@@ -48,7 +51,7 @@ async function updateLoop(content_type, find, count, current = 0) {
       console.log(`running update #${current} of ${count}`);
       await updateGateway(content_type, contents[i]);
     }
-    if (current < 2000) {
+    if (current < 200) {
       return updateLoop(content_type, find, count, current);
     } else {
       return;
