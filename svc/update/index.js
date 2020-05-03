@@ -49,10 +49,12 @@ async function updateLoop(content_type, find, count, current = 0) {
   } else {
     for (let i = 0; i < length; i++) {
       current += 1;
-      console.log(`running update #${current} of ${count}`);
+      if (i % 10 === 0) {
+        console.log(`running update #${current} of ${count}`);
+      }
       await updateGateway(content_type, contents[i]);
     }
-    if (current < 200) {
+    if (current < 5000) {
       return updateLoop(content_type, find, count, current);
     } else {
       return;

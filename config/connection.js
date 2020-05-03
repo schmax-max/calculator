@@ -1,19 +1,22 @@
 const mongoose = require("mongoose");
-let ensure_production_env = false;
-// ensure_production_env = true;
-let ensure_qa_env = false;
-// ensure_qa_env = true
+const env = process.env.NODE_ENV || "local";
 
-if (ensure_production_env) {
-  console.log("forcing production env");
-  require("dotenv").config({ path: "./.envProd" });
-} else if (ensure_qa_env) {
-  require("dotenv").config({ path: "./.envQa" });
-} else {
-  require("dotenv").config();
+if (env === "local") {
+  let ensure_production_env = false;
+  // ensure_production_env = true;
+  let ensure_qa_env = false;
+  // ensure_qa_env = true
+
+  if (ensure_production_env) {
+    console.log("forcing production env");
+    require("dotenv").config({ path: "./.envProd" });
+  } else if (ensure_qa_env) {
+    require("dotenv").config({ path: "./.envQa" });
+  } else {
+    require("dotenv").config();
+  }
 }
 
-const env = process.env.NODE_ENV || "local";
 const _DB_USERNAME = process.env._DB_USERNAME || "micro";
 const _DB_PASSWORD = process.env._DB_PASSWORD || "password";
 const _DB_HOSTS = process.env._DB_HOSTS || "localhost:27017";
