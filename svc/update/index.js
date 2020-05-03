@@ -21,6 +21,7 @@ async function update(req) {
       for (let i = 0; i < content_types.length; i++) {
         const content_type = content_types[i];
         const count = await Calc[`${content_type}s`].countDocuments(find);
+        console.log({ count });
         return await updateLoop(content_type, find, count);
       }
     } catch (e) {

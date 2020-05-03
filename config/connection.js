@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 let ensure_production_env = false;
-ensure_production_env = true;
+// ensure_production_env = true;
 let ensure_qa_env = false;
 // ensure_qa_env = true
 
