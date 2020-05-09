@@ -43,6 +43,6 @@ mongoose
   })
   .catch((error) => {
     console.log("error connecting to database");
-    console.log({ _DB_USERNAME });
+    console.log({ _DB_USERNAME, _DB_HOSTS });
     return console.log(error);
   });
