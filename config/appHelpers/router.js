@@ -5,7 +5,7 @@ const update = require("../../svc/update");
 const service = require("../service");
 
 router.post(`/${service}/:type`, trigger);
-router.get(`/${service}/trigger`, updateTrigger);
+router.get(`/${service}/:type`, updateTrigger);
 
 async function trigger(req, res, next) {
   console.log(`${service} triggered by ${req.params.type}`);
