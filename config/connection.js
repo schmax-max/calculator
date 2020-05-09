@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 const env = process.env.NODE_ENV || "local";
 
 if (env === "local") {
+  console.log("environment considered local");
   let ensure_production_env = false;
-  ensure_production_env = true;
+  // ensure_production_env = true;
   let ensure_qa_env = false;
   // ensure_qa_env = true
 
@@ -41,5 +42,7 @@ mongoose
     console.log("===========");
   })
   .catch((error) => {
+    console.log("error connecting to database");
+    console.log({ _DB_USERNAME });
     return console.log(error);
   });
