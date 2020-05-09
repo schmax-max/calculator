@@ -3,7 +3,7 @@ const env = process.env.NODE_ENV || "local";
 
 if (env === "local") {
   let ensure_production_env = false;
-  // ensure_production_env = true;
+  ensure_production_env = true;
   let ensure_qa_env = false;
   // ensure_qa_env = true
 

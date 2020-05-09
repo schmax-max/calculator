@@ -1,5 +1,5 @@
 runtime: nodejs10
-service: calculator
+service: calculator-qa
 handlers:
   - url: /.*
     secure: always
